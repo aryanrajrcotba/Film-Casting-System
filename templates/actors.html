@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Actors</h2>
+<ul class="list-group">
+    {% for actor in actors %}
+    <li class="list-group-item">{{ actor.name }}, Age: {{ actor.age }}, Gender: {{ actor.gender }}, Experience: {{ actor.experience }} years</li>
+    {% endfor %}
+</ul>
+{% endblock %}

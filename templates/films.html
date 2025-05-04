@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Films</h2>
+<ul class="list-group">
+    {% for film in films %}
+    <li class="list-group-item">{{ film.title }} - {{ film.genre }} ({{ film.release_year }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

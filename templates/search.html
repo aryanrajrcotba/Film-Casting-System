@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Actors</h2>
+<form method="POST">
+    <div class="mb-3"><input type="number" name="age" placeholder="Max Age" class="form-control"></div>
+    <div class="mb-3"><select name="gender" class="form-control"><option value="Male">Male</option><option value="Female">Female</option></select></div>
+    <div class="mb-3"><input type="number" name="experience" placeholder="Min Experience (years)" class="form-control"></div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<ul class="list-group mt-4">
+    {% for actor in actors %}
+    <li class="list-group-item">{{ actor.name }} - Age: {{ actor.age }}, Experience: {{ actor.experience }} years</li>
+    {% endfor %}
+</ul>
+{% endblock %}
